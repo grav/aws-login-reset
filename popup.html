@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AWS Login Reset</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <h1>AWS Login Reset</h1>
+      <p id="message">Remove only AWS authentication cookies used by the sign-in flow.</p>
+      <div class="buttons">
+        <button id="reset" type="button">Reset AWS sign-in</button>
+        <button id="dismiss" class="secondary" type="button" hidden>Not now</button>
+      </div>
+      <label>
+        <input id="reload" type="checkbox" checked>
+        Reload this tab afterward
+      </label>
+      <output id="status" aria-live="polite"></output>
+      <details id="details" hidden>
+        <summary>Removed cookies</summary>
+        <ul id="removed"></ul>
+      </details>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "minimum_chrome_version": "127",
+  "name": "AWS Login Reset",
+  "version": "0.2.0",
+  "description": "Clears stale AWS sign-in cookies that can cause aws login to fail with HTTP 400.",
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "storage",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "https://signin.aws/*",
+    "https://*.signin.aws/*",
+    "https://signin.aws.amazon.com/*",
+    "https://*.signin.aws.amazon.com/*",
+    "https://*.aws.amazon.com/*"
+  ],
+  "action": {
+    "default_title": "Reset AWS sign-in",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
