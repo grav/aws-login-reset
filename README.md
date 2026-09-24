@@ -46,3 +46,7 @@ The extension observes only top-level requests to the declared AWS sign-in
 hosts. It reads the HTTP status and URL path, but not request headers, response
 bodies, cookie values, or OAuth query parameters. Automatic popup opening
 requires Chromium 127 or newer.
+
+## License
+
+Licensed under the [MIT License](LICENSE).
